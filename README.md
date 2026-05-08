@@ -1,8 +1,75 @@
-# Marketly
+# Marketly 🛒
 
-Cuando empecé a pensar en qué proyecto hacer para el TFG, tenía claro que quería construir algo útil de verdad, no solo una aplicación de ejemplo. Marketly surgió de querer crear un sitio donde la gente pudiera vender sus creaciones digitales de forma segura, sin miedo a que el comprador no pague o a que el vendedor no entregue lo prometido.
-El desarrollo no ha sido un camino fácil. Hubo momentos frustrantes, especialmente al principio cuando me enfrentaba a tecnologías nuevas que no había usado antes. Cosas que parecían simples a veces no funcionaban como esperaba y me llevaban horas resolver. Pero cada problema superado me enseñó más que cualquier ejercicio de clase, porque era un problema real que yo mismo tenía que solucionar.
-De todo lo que he desarrollado, lo que más satisfacción me ha dado es ver funcionar el sistema de pagos. Ver cómo el dinero queda retenido hasta que el comprador confirma que ha recibido bien el producto, y cómo en caso de problema un moderador puede intervenir y decidir a quién va el dinero, fue una de esas sensaciones que hacen que todo el esfuerzo merezca la pena.
-El chat en tiempo real también fue uno de los retos más interesantes. Conseguir que los mensajes aparecieran al instante, y que además mostrara avisos según el estado del pedido, le dio a la aplicación una sensación de producto terminado que me gustó mucho.
-Durante el proyecto también aprendí lo importante que es escribir código limpio y ordenado. Al principio escribía código que funcionaba pero que no seguía ninguna norma. Con el tiempo fui corrigiendo esos hábitos y organizando mejor el proyecto, algo que noto que marca una gran diferencia cuando tienes que volver a leer o modificar algo que escribiste semanas antes.
-En definitiva, Marketly es el proyecto del que más orgulloso me siento. No solo porque funciona, sino porque cada parte de él la he construido yo, resolviendo los problemas que iban surgiendo y aprendiendo en el proceso. Ha sido una experiencia que me ha preparado mejor para el mundo laboral de lo que esperaba cuando empecé.
+Marketplace de productos digitales desarrollado como Trabajo de Fin de Grado (TFG) del ciclo de Desarrollo de Aplicaciones Multiplataforma (DAM).
+
+## Descripción
+
+Marketly es una aplicación Android que permite a los usuarios comprar y vender productos digitales como música, software, ebooks, fotografías y más. Cuenta con un sistema de retención de pagos que protege tanto al comprador como al vendedor, un chat en tiempo real y un panel de moderación para resolver disputas.
+
+## Funcionalidades
+
+- Registro e inicio de sesión con email o nombre de usuario
+- Publicación de productos digitales con imágenes y archivo descargable
+- Sistema de compra con retención de saldo hasta confirmar la recepción
+- Chat en tiempo real entre comprador y vendedor
+- Sistema de incidencias y moderación de disputas
+- Valoraciones entre usuarios
+- Cartera virtual con historial de transacciones
+- Panel de moderación para admins y moderadores
+- Perfil de usuario con productos y valoraciones
+- Cierre automático de pedidos a las 48h
+
+## Tecnologías
+
+- **Kotlin** — Lenguaje principal
+- **Android Studio** — Entorno de desarrollo
+- **Supabase** — Backend (base de datos, autenticación, storage y realtime)
+- **PostgreSQL** — Base de datos relacional
+- **Glide** — Carga de imágenes
+- **Material Design** — Componentes de interfaz
+- **ViewPager2** — Carrusel de imágenes
+
+## Estructura del proyecto
+app/src/main/java/com/ramos/marketly/
+├── controller/       # Activities
+├── model/            # Clases de datos
+├── adapter/          # Adaptadores RecyclerView
+└── utils/            # Utilidades (Supabase, SessionManager)
+
+## Base de datos
+
+El proyecto utiliza las siguientes tablas en Supabase:
+
+- `users` — Usuarios de la plataforma
+- `products` — Productos publicados
+- `orders` — Órdenes de compra
+- `messages` — Mensajes del chat
+- `incidences` — Incidencias abiertas
+- `ratings` — Valoraciones entre usuarios
+- `wallet_transactions` — Historial de transacciones
+
+## Configuración
+
+1. Clona el repositorio
+```bash
+git clone https://github.com/tuusuario/marketly.git
+```
+
+2. Crea el archivo `local.properties` en la raíz del proyecto y añade tus credenciales de Supabase:
+SUPABASE_URL=tu_url_de_supabase
+SUPABASE_KEY=tu_clave_de_supabase
+
+3. Abre el proyecto en Android Studio y sincroniza las dependencias con Gradle.
+
+4. Ejecuta la aplicación en un emulador o dispositivo físico con Android API 36 o superior.
+
+## Requisitos
+
+- Android Studio Hedgehog o superior
+- Android API 36 o superior
+- Cuenta en Supabase con las tablas configuradas
+
+## Autor
+
+**Joel Ramos Lázaro**
+TFG — Ciclo DAM
