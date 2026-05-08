@@ -52,12 +52,12 @@ El proyecto utiliza las siguientes tablas en Supabase:
 
 1. Clona el repositorio
 ```bash
-git clone https://github.com/tuusuario/marketly.git
+git clone https://github.com/JoelXD18/Marketly.git
 ```
 
 2. Crea el archivo `local.properties` en la raíz del proyecto y añade tus credenciales de Supabase:
-SUPABASE_URL=tu_url_de_supabase
-SUPABASE_KEY=tu_clave_de_supabase
+SUPABASE_URL= consula al administrador (JoelXD18).
+SUPABASE_KEY= consula al administrador (JoelXD18).
 
 3. Abre el proyecto en Android Studio y sincroniza las dependencias con Gradle.
 
